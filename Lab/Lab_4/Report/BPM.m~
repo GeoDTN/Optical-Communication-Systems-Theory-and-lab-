@@ -1,0 +1,20 @@
+function Az = BPM(A,b2,gamma,alpha,Z,T)
+%Az returns the propagation of the signal A(T) along the space axis Z,
+%in a medium with group-velocity dispersion b2, nonlinearity gamma
+%and linear attenuation alpha. 
+
+Az=zeros(length(T),length(Z));
+L=length(T);
+ft=linspace(-L/(T(end)-T(1)),L/(T(end)-T(1)),L);
+
+h=Z(2)-Z(1);
+W=1i*gamma*abs(A).^2;
+E=exp(1i*0.5*b2*(2*pi*ft).^2*h/2);
+Az(:,1)=A;
+
+for i=2:length(Z)
+    A=ifft(ifftshift(E.*fftshift(fft(A))));
+    A=A.*exp(h*W);
+    Az(:,i)=ifft(ifftshift(E.*fftshift(fft(A))))*exp(-alpha*Z(i)/2);
+end
+end

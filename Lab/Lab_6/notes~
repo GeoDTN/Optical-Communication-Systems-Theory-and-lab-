@@ -1,0 +1,18 @@
+Lab 6 Notes
+
+Tx1_11, Tx1_12: 4.948500e+000 dB (Gain)
+Tx1_13, Tx1_14: 2 dB (Gain)
+Tx1_15, Tx1_16: 6 dB (Gain)
+
+Tx1_2: 3.500000e-004 [m] (Device section light)
+
+193202.5 GHz, -16.3394051617244 dBm
+193315.3125 GHz, -4.83739092660904 dBm
+193428.125 GHz, 10.2580561548299 dBm
+193540.9375 GHz, -3.40225820340168 dBm
+193653.75 GHz, -18.786766781649 dBm
+
+
+use the envelope for the bandwidth!!!
+longitudinal mode separation=112.8125 GHz
+

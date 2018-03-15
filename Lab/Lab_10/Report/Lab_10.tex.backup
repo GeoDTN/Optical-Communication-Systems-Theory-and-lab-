@@ -1,0 +1,70 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{ctable} % for \specialrule command
+
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+% Title Page
+\title{\textbf{OPTICAL COMMUNICATION COMPONENTS \\ Laboratory experiments}}
+\author{Getahune Kebede\\Eridia Bozzetti\\Tigist Getachew\\Riccardo Fona\\Andrea Migliorati\\Simoni Nicola\\Davide Rocco\\Melkamsew Tenaw}
+\date{University of Brescia, Faculty of Engineering\\A.Y. 2013-2014}
+
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Setup 1}
+In Table \ref{powermeasures} are reported the power measured at the transmitter.
+
+\begin{table}[ht!]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \specialrule{.1em}{.05em}{.05em}
+	 $\lambda$ [nm] & Power [dBm] & Power [mW] \\
+	\hline
+	1550 & -2.97 & 0.5\\
+	\hline
+	1310 & -6.60 & 0.22\\
+      \specialrule{.1em}{.05em}{.05em}
+    \end{tabular}
+  \end{center}
+\caption{Power measures.}
+\label{powermeasures}
+\label{tab}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Setup 2}
+The maximum laser output power of the optical power meter is 10 dBm. To avoid link damage we implement an attenuation of 6 dB,
+so the effective output power is 4 dBm.
+
+\subsection*{Method 1}
+The laser wavelength is $\lambda=1552.52$ nm.
+The optical power measured after the multiplexer is $P=-1.30$ dBm.
+
+To measure the insertion losses of the connectors we loop the input and the output of the optical power meter.
+The measured power is 2.61 dBm, so the insertion loss is 1.39 dB.
+
+\subsection*{Method 2}
+For this measurement we have inserted optical coupler of 70\%-30\% power divider.
+The measured power at the receiver, for the 1550 nm link, is $P=-19.67$ dBm.
+
+\newpage
+\section*{Setup 3}
+We measure the throughput/BER of the 1310 nm link, as a function of the attenuation.
+In the Figure \ref{throughput} are reported the measured values.
+We can observe that the throughput is almost constant until an attenuation value of 9 dB, then it immediately falls.
+
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{throughput.png}\\
+   \caption{Throughput versus attenuation.}
+   \label{throughput}
+\end{figure}
+
+\end{document}

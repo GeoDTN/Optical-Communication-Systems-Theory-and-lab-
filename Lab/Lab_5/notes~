@@ -1,0 +1,39 @@
+LAB 5
+
+rayleigh 1
+
+Exercise 1
+-use simplified equation at pag 6
+-eta is [1/m]
+-translate alpha in linear units!!! has to be in [1/m] -> 0.2 [dB/Km]
+
+Exercise 2
+
+Exercise 3
+evaluate the spectrum at the end of the fiber
+
+Exercise 4
+For -58.23 dB of Rayleigh scattering coefficient, the BER starts exceedings 10^-9 dB.
+
+Exercise 5/6
+there is no dispersion! if the pulses are overlapped they remain overlapped:
+N.B.: the bit sequence is different from the one in the parameters!!!
+Just compare the results.
+
+
+
+only signals with the same polarization are amplified
+
+max raman gain
+
+1st when they are parallel
+then rotate +-90° so they are orthogonal
+
+Brilluoin_1
+
+Brilluoin_2
+
+es 8
+enter the numerical value in watts (linear units)
+
+no more than 10 dBm of reflected power --> change phase to achieve it

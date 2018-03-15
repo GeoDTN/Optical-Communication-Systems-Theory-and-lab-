@@ -1,0 +1,241 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{ctable} % for \specialrule command
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+% Title Page
+\title{\textbf{OPTICAL COMMUNICATION COMPONENTS \\ Lab 9}}
+\author{Nicola Simoni, Tadewos Somano, Melkamsew Tenaw}
+\date{University of Brescia, Faculty of Engineering\\A.Y. 2013-2014}
+
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We use a 175 Km unrepeated link with a booster amplifier at the transmitter and a pre-amp at the receiver.
+A Raman pump backward pumps the transmission fiber from the receiver terminal end.
+We compare the Optical SNR (OSNR) versus frequency for 10 and 40 Gb/s transmissions with both Raman pump turned on and off.
+The parameters are the following:
+\begin{itemize}
+ \item Gain = 100 dB
+ \item Noise Figure = 5 dB
+ \item Output Power = 0.1 W
+\end{itemize}
+
+In Figure \ref{q1a_10} is shown the result for 10 Gb/s and Raman pump turned off,
+while in Figure \ref{q1a_10_ramanon} is shown the result for the same bit-rate and Raman pump turned on.
+In Figure \ref{q1a_40} is shown the result for 40 Gb/s and Raman pump turned off,
+while in Figure \ref{q1a_40_ramanon} is shown the result for the same bit-rate and Raman pump turned on.
+
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, Raman OFF.}
+   \label{q1a_10}
+\end{figure}
+   
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10_ramanon.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, Raman ON.}
+   \label{q1a_10_ramanon}
+\end{figure}
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_40.png}\\
+   \caption{OSNR versus frequency, 40 Gb/s, Raman OFF.}
+   \label{q1a_40}
+\end{figure}
+   
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_40_ramanon.png}\\
+   \caption{OSNR versus frequency, 40 Gb/s, Raman ON.}
+   \label{q1a_40_ramanon}
+\end{figure}
+
+In Table \ref{ber} are reported the BER values, measured from the eye diagram, for the four cases.
+\begin{table}[ht!]
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \specialrule{.1em}{.05em}{.05em}
+	 Bitrate [Gb/s] & Raman & BER \\
+	\hline
+	10 & OFF & $4.975 \cdot 10^{-11}$\\
+	\hline
+	10 & ON & $1.612 \cdot 10^{-70}$\\
+	\hline
+	40 & OFF & $1.086 \cdot 10^{-4}$\\
+	\hline
+	40 & ON & $2.354 \cdot 10^{-27}$\\
+      \specialrule{.1em}{.05em}{.05em}
+    \end{tabular}
+  \end{center}
+\caption{BERs.}
+\label{ber}
+\label{tab}
+\end{table}
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1A}
+By looking at the graphs we can observe that, increasing the bit-rate from 10 to 40 Gb/s,
+the OSNR decreases of nearly 6 dB.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1B}
+For higher speed the OSNR can be compensated with the use of a Raman pump: in fact we can notice that
+the pump gives a contribution of nearly 4 dB (actually the Raman response is not linear).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1C}
+We consider the 10 Gb/s transmission and we change the noise figure of the amplifier to 10 dB.
+The Raman pump is turned off. In Figure \ref{q1a_10_hnf} is shown the result.
+The OSNR curve is similar to the one in Figure \ref{q1a_10} (it is shifted down of nearly 0.04 dB),
+the BER instead is increased to $5.24 \cdot 10^{-11}$.
+Now we set the noise figure to the original value and we halve the power. In Figure \ref{q1a_10_hp} is shown the result:
+the curve is shifted down of 3 dB and the BER is nearly $4.12 \cdot 10^{-4}$.
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10_hnf.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, noise figure halved.}
+   \label{q1a_10_hnf}
+\end{figure}
+   
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10_hp.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, power halved.}
+   \label{q1a_10_hp}
+\end{figure}
+
+
+We repeat the same experiment with the Raman pump turned on: the BER for a noise figure of 10 dB is $1.66 \cdot 10^{-69}$.
+By halving the power, instead, the BER is $2.24 \cdot 10^{-44}$. In Figure \ref{q1a_10_hnframanon} and \ref{q1a_10_hpramanon}
+are shown the results.
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10_hnframanon.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, noise figure halved, Raman ON.}
+   \label{q1a_10_hnframanon}
+\end{figure}
+   
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q1a_10_hpramanon.png}\\
+   \caption{OSNR versus frequency, 10 Gb/s, power halved, Raman ON.}
+   \label{q1a_10_hpramanon}
+\end{figure}
+
+In Table \ref{tab2} are summarized the obtained results.
+
+\begin{table}[ht!]
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \specialrule{.1em}{.05em}{.05em}
+	 Noise Figure [dB] & Power [W] & Raman & BER \\
+	\hline
+	10 & 0.1 & OFF & $5.24 \cdot 10^{-11}$\\
+	\hline
+	5 & 0.05 & OFF & $4.12 \cdot 10^{-4}$\\
+	\hline
+	10 & 0.1 & ON & $1.66 \cdot 10^{-69}$\\
+	\hline
+	5 & 0.05 & ON & $2.24 \cdot 10^{-44}$\\
+      \specialrule{.1em}{.05em}{.05em}
+    \end{tabular}
+  \end{center}
+\caption{BERs, 10 Gb/s.}
+\label{tab2}
+\end{table}
+
+By increasing the noise figure or reducing the booster output power, the BER is degraded. This can be compensated by turning on the Raman pump.
+
+
+
+
+\newpage
+Now we study a system with 64 channels at 10 Gb/s each. Three loop structures allow to achieve a distance of 7500 Km.
+The fiber in the two loops has the following characteristics:
+Dispersion $D=2 \cdot 10^{-6} \ [s/m^2]$ and dispersion slope $S=0.08 \cdot 10^{3} \ [s/m^3]$.
+At each loop we have 10 dB of losses compensated by 10 dB of gain.
+
+The fiber of the central link is a Single Mode Fiber (SMF) with tunable parameters. Its length is $\approx 58.8$ Km.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2A}
+Increasing the transmitted power we increase the non-linear effects: in particular we have cross phase modulation (XPM) and
+four wave mixing (FWM).
+To find the optimal power we start running the simulation with the default parameters:\\
+$D=-1.7 \cdot 10^{-5} \ [s/m^2]$, $S=80 \ [s/m^3]$ and $P=20 \ mW$.
+In Figure \ref{q2_1} is shown the correspondent eye diagram.
+
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q2_1.png}\\
+   \caption{Eye diagram $P=20 \ mW$.}
+   \label{q2_1}
+\end{figure}
+
+We decrease the power and we set it to 10 mW: in Figure \ref{q2_2} is shown the eye diagram.
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q2_2.png}\\
+   \caption{Eye diagram $P=10 \ mW$.}
+   \label{q2_2}
+\end{figure}
+
+Then we increase the power and we set it to 30 mW. In Figure \ref{q2_3} is shown the result.
+\begin{figure}[!ht]
+   \centering
+   \includegraphics[width=12cm]{q2_3.png}\\
+   \caption{Eye diagram $P=30 \ mW$.}
+   \label{q2_3}
+\end{figure}
+
+By examining the obtained eye diagrams, we can conclude that the optimal power at the transmitter output is around 20 mW.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2B}
+A Dispersion Compensated Fiber (DCF) is needed to compensate the dispersion of the two loops.
+In fact, the system is composed of two loops of 50 Km each. Each loop is repeated 5 times, so the total length of the loops
+is 500 Km. The dispersion of the fiber used in the loops is $D=2 \cdot 10^{-6} \ [m/s^2]$.
+The fiber of the link in which we can compensate the dispersion is $L=10^3/17\approx 58.8 \ Km$, so to obtain the compensation
+value we apply the formula: $$ D_1 \cdot L_1 = - D_2 \cdot L_2$$
+so $$D_2=-\frac{D_1 \cdot L_1}{L_2}= -\frac{2 \cdot 10^{-6} \ [s/m^2] \cdot 500 \ [Km]}{58.8 \ [Km]}=-1.7 \cdot 10^{-5} \ [s/m^2]$$
+that is exactly the default simulation value.
+
+\newpage
+Now we study how several services can be mixed in the same transmission system for applications in a metropolitan access network.
+The system is composed of 40 channels at 2.5 Gb/s with 25 GHz spacing, and 10 channels at 10 Gb/s with 100 GHz spacing.
+We work in the C band (1538-1554 nm).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 3A}
+%Which is the wavelength band allocated for the 2.5 and 10 Gbps channels according to the model and 
+%which is the spectrum shown in the OSA? Are they the same?
+
+According to the model, the wavelength band allocated to the 2.5 Gb/s channels goes from 1547 to 1554 nm, so in total is
+7 nm. The band for the 10 Gb/s channels goes from 1538 to 1545 nm, so in total is 7 nm as well.
+
+
+
+
+
+
+
+
+
+
+\end{document}

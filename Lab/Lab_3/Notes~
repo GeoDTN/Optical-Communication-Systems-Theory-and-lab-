@@ -1,0 +1,24 @@
+EXERCISE 2
+-28.234 dBm @ 2.5e+10 GHz offset from carrier	-> peak value	(1.501E-6)
+7.18368382135825E-06	-> integrated power	(-21.4365 dBm)
+
+
+EXERCISE 3
+-49.5899 dBm @ 2.5e+10 GHz offset from carrier	-> peak value (1.0990E-08)
+1.52386335346765E-07	-> integrated power (-38.1705 dBm)
+
+
+EXERCISE 4
+-46.53625 dBm @ 2.5e+10 GHz offset from carrier --> peak value (2.2201e-08)
+6.39927991263679E-07	-> integrated power (-31.9387 dBm)
+
+
+QUESTION 3
+Two methods to reduce four-wave mixing efficiency are:
+1) Use unequal channel spacing (incoherent out of band crosstalk)
+2) Use larger fiber dispersion (lower FWM efficiency)
+
+
+EXERCISE 5
+salvare i valori dell'occhio in dB
+
